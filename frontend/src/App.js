@@ -28,7 +28,7 @@ const App = () => {
 
   // Add Task server
   const addTaskServer = async (task) => {
-    const res = await fetch(process.env.REACT_APP_SERVER_URL + "/tasks/add", {
+    const res = await fetch(process.env.REACT_APP_SERVER_URL + "/tasks", {
       method: "POST",
       headers: {
         "Content-type": "application/json",
@@ -64,8 +64,8 @@ const App = () => {
 
   // update reminder server
   const updateReminderServer = async (id, reminder) => {
-    const res = await fetch(process.env.REACT_APP_SERVER_URL + `/tasks/update/${id}`, {
-      method: "POST",
+    const res = await fetch(process.env.REACT_APP_SERVER_URL + `/tasks/${id}`, {
+      method: "PUT",
     });
 
     const data = await res.json();

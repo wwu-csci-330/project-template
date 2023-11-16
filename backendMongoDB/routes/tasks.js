@@ -7,7 +7,7 @@ router.route("/").get((req, res) => {
     .catch((err) => res.status(400).json("Error: " + err));
 });
 
-router.route("/add").post((req, res) => {
+router.route("/").post((req, res) => {
   console.log(req.body);
 
   const text = req.body.text;
@@ -38,7 +38,7 @@ router.route("/:id").delete((req, res) => {
     .catch((err) => res.status(400).json("Error: " + err));
 });
 
-router.route("/update/:id").post((req, res) => {
+router.route("/:id").put((req, res) => {
   Task.findById(req.params.id)
     .then((task) => {
       task.reminder = !task.reminder;

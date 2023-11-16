@@ -16,7 +16,7 @@ router.route("/").get((req, res) => {
 });
 
 /* ADD A NEW TASK */
-router.route("/add").post((req, res) => {
+router.route("/").post((req, res) => {
   const newTask = {
     _id: uuidv4(),
     text: req.body.text,
@@ -43,7 +43,7 @@ router.route("/:id").delete((req, res) => {
 });
 
 /* UPDATE A TASK */
-router.route("/update/:id").post((req, res) => {
+router.route("/:id").put((req, res) => {
   // write this method yourself
 });
 

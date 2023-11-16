@@ -19,7 +19,7 @@ To start the server, you need to:
 1. set up your local MySQL database and table
 2. set up the proper user who has access to the database and table
 3. replace the variables in the .env file (e.g., USER, PASSWORD)
-4. start the server by running "nodemon server"
+4. start the server by running "npm start"
 
 Here is the script that you can use to create the database and table:
 
